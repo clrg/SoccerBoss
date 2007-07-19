@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>SoccerBoss</name>
+	<comment></comment>
+	<projects>
+		<project>org.vexi.widgets</project>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.vexi.vexidev.vexiNature</nature>
+	</natures>
+</projectDescription>
