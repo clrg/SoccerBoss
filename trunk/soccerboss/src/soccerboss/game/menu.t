@@ -6,10 +6,11 @@
             <ui:box fill=":.image.logo_black" shrink="true" />
             <ui:box height="50" />
             <interface.button id="newgame" text="New Game" />
-            <!--interface.button id="endgame" text="End Game" /-->
+            <interface.button id="profile" text="Profiles" />
         </ui:box>
         
         $newgame.action ++= function(v) { surface.load("start"); return; }
+        $profile.action ++= function(v) { surface.load("profiles"); return; }
         
     </ui:box>
 </vexi>
