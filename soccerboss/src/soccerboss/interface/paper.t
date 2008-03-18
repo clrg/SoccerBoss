@@ -7,8 +7,8 @@
             <ui:box layout="layer">
                 <ui:box orient="vertical">
                     <ui:box height="40" fill="white">
-                        <ui:box width="40" />
-                        <ui:box id="title" fontsize="14" textcolor="#ff7171" />
+                        <ui:box width="400" />
+                        <ui:box id="title" align="left" fontsize="14" textcolor="#ff7171" />
                     </ui:box>
                     <ui:box fill=":.image.paper_line" tile="true">
                         <ui:box width="120" hshrink="true" />
