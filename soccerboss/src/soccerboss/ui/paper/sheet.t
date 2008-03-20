@@ -1,13 +1,15 @@
 <!-- Copyright 2008 GPLv3 - see COPYING for details -->
 
-<vexi xmlns:ui="vexi://ui" xmlns:lay="vexi.layout" xmlns="soccerboss">
+<vexi xmlns:ui="vexi://ui" xmlns:lay="vexi.layout" xmlns="soccerboss.ui.paper">
     <ui:box redirect=":$content" layout="layer">
         <lay:margin margin="50 0 0 50">
             <ui:box width="1" fill="#888888" />
             <ui:box layout="layer">
                 <ui:box orient="vertical">
                     <ui:box height="40" fill="white" layout="place">
-                        <ui:box id="title" fontsize="14" textcolor="#ff7171" width="700" />
+                        <ui:box align="left" width="800">
+                            <ui:box id="title" fontsize="14" textcolor="#ff7171" />
+                        </ui:box>
                     </ui:box>
                     <ui:box fill=":.image.paper_line" tile="true">
                         <ui:box width="120" hshrink="true" />
