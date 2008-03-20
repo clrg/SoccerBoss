@@ -1,6 +1,6 @@
 <!-- Copyright 2008 GPLv3 - see COPYING for details -->
 
-<vexi xmlns:ui="vexi://ui" xmlns="soccerboss">
+<vexi xmlns:ui="vexi://ui" xmlns="soccerboss.ui.paper">
     <ui:box align="left" cursor="hand" shrink="true">
         <ui:box id="text" fontsize="16" shrink="true" text="Signature" />
         <ui:box layout="layer" width="150">

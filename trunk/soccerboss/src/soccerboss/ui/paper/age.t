@@ -1,11 +1,16 @@
 <!-- Copyright 2008 GPLv3 - see COPYING for details -->
 
-<vexi xmlns:ui="vexi://ui" xmlns="soccerboss.image">
+<vexi xmlns:ui="vexi://ui" xmlns="soccerboss.ui.paper.image">
     <ui:box width="42" height="30" cursor="hand">
         <ui:box id="text" fontsize="16" textcolor="#888888" />
         
         thisbox.agevalue ++= function(v) { cascade = v; $text.text = v; }
-        thisbox.selected ++= function(v) { cascade = v; fill = v ? .circle : null; }
+        
+        thisbox.selected ++= function(v) {
+            cascade = v;
+            fill = v ? .circle : null;
+            $text.textcolor = v ? "black" : "#888888";
+        }
         
         thisbox.Enter ++= function(v) {
             if (!selected) $text.textcolor = "red";
