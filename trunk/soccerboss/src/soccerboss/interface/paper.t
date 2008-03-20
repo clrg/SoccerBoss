@@ -6,15 +6,14 @@
             <ui:box width="1" fill="#888888" />
             <ui:box layout="layer">
                 <ui:box orient="vertical">
-                    <ui:box height="40" fill="white">
-                        <ui:box width="400" />
-                        <ui:box id="title" align="left" fontsize="14" textcolor="#ff7171" />
+                    <ui:box height="40" fill="white" layout="place">
+                        <ui:box id="title" fontsize="14" textcolor="#ff7171" width="700" />
                     </ui:box>
                     <ui:box fill=":.image.paper_line" tile="true">
                         <ui:box width="120" hshrink="true" />
                         <ui:box orient="vertical">
                             <ui:box height="1" />
-                            <ui:box id="content" orient="vertical" vshrink="true" />
+                            <lay:grid id="content" cols="1" vshrink="true" />
                             <ui:box /> 
                         </ui:box>
                     </ui:box>
@@ -27,8 +26,10 @@
         
         $content.Children ++= function(v) {
             cascade = v;
-            if (v) v.height = 30;
+            if (v) v.height = 30 * (v.rowspan ? v.rowspan : 1);
         }
+        
+        thisbox.cols ++= function(v) { $content.cols = v; return; }
         
         thisbox.title ++= function(v) {
             if (v) v = v.toUpperCase();
