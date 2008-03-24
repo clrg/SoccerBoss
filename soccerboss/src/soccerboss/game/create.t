@@ -9,14 +9,7 @@
         <label text="Surname" />
         <entry id="sname" />
         <label text="Starting Age" />
-        <ui:box id="age" align="left" shrink="true">
-            <ui:box width="20" />
-            <age agevalue="30" />
-            <age agevalue="35" />
-            <age agevalue="40" />
-            <age agevalue="45" />
-            <age agevalue="50" />
-        </ui:box>
+        <ageselect id="age" />
         <label text="Experience Bonus" />
         <ui:box>
             <ui:box width="20" />
@@ -31,25 +24,27 @@
         <ui:box />
         <ui:box shrink="true" />
         <signature id="done" />
+        <ui:box shrink="true" />
+        <ui:box id="incomplete" align="left" display="false" shrink="true"
+            fontsize="14" textcolor="#ff3333" text="Please complete all fields" />
         
-        thisbox.agebox ++= function(v) {
-            if (agebox) agebox.selected = false;
+        $age.value ++= function(v) {
             cascade = v;
-            agebox.selected = true;
-            $retireafter.text = (65 - agebox.agevalue)+ " years";
-            $skillpoints.text = (20+5*(agebox.agevalue-30)*5)+ " skill points";
+            $retireafter.text = (65 - v)+ " years";
+            $skillpoints.text = (20+5*(v-30)*5)+ " skill points";
         }
         
-        agebox = $age[2];
-        
-        var agePress = function(v) { agebox = trapee; return; }
-        
-        for (var i=1; $age.numchildren>i; i++) {
-            $age[i].Press1 ++= agePress;
-        }
+        // fire trap for initial value
+        $age.value = $age.value;
         
         $done.Press1 ++= function(v) {
-            var profile = { forename:$fname.text, surname:$sname.text, age:agebox.agevalue };
+            var fname = $fname.text;
+            var sname = $sname.text;
+            if (fname == "" or sname == "") {
+                $incomplete.display = true;
+                return;
+            }
+            var profile = { forename:$fname.text, surname:$sname.text, age:$age.value };
             /*
             db.create("profiles", profile);
             surface.load("newgame", profile);
