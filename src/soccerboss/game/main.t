@@ -1,11 +1,11 @@
 <!-- Copyright 2008 GPLv3 - see COPYING for details -->
 
-<vexi xmlns:ui="vexi://ui" xmlns:wi="vexi.widget" xmlns:sb="soccerboss.game">
+<vexi xmlns:ui="vexi://ui" xmlns:wi="vexi.widget" xmlns:sb="soccerboss.game" xmlns="vexi.layout">
     <wi:surface />
     <ui:box framewidth="800" frameheight="600" titlebar="Soccer Boss 0.1dev">
-        <wi:cardpane id="view">
+        <cardpane id="view">
             <sb:menu id="menu" />
-        </wi:cardpane>
+        </cardpane>
         
         var views = { menu:$menu, start:$start };
         
