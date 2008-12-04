@@ -1,0 +1,10 @@
+{
+  "source" : [
+    "F/soccerboss/src",
+    "F/soccerboss/src_dev"
+  ],
+  "projects" : [
+    "P/org.vexi.widgets",
+    "P/vexigamelib"
+  ]
+}
