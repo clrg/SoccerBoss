@@ -11,7 +11,7 @@
         </ui:box>
         
         thisbox.th_cursor   = $edit.th_cursor;
-        thisbox.th_edit     = $edit.th_edit;
+        thisbox.v_edit      = $edit.v_edit;
         thisbox.th_shadowtext = $shadow;
         thisbox.th_view     = $edit;
         thisbox.th_viewport = thisbox;
@@ -19,7 +19,7 @@
         $edit.cursorcolor = "darkgray";
         $edit.highlightcolor = "black";
         $edit.highlightfill = "#BBBBBB";
-        $edit.th_edit.fontsize = 16;
+        $edit.v_edit.fontsize = 16;
         
         thisbox.text ++= function(v) { $edit.text = v; return; }
         thisbox.text ++= function()  { return $edit.text; }
