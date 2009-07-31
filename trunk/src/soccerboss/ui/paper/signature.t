@@ -5,8 +5,8 @@
     <role:focusable />
     <ui:box align="left" cursor="hand" shrink="true">
         <ui:box id="text" fontsize="16" shrink="true" text="Signature" />
-        <ui:box layout="layer" width="150">
-            <ui:box align="bottom" fill="#333333" height="2" />
+        <ui:box align="bottom" layout="layer" width="150">
+            <ui:box fill="#333333" height="2" />
             <ui:box id="active" display="false" fill=":.image.signature" shrink="true" />
         </ui:box>
         
