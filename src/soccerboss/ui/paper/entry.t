@@ -17,13 +17,13 @@
         thisbox.th_view     = $edit;
         thisbox.th_viewport = thisbox;
         
-        $edit.cursorcolor = "darkgray";
+        $edit.cursorcolor = "red";
         $edit.highlightcolor = "black";
         $edit.highlightfill = "#BBBBBB";
         $edit.v_edit.fontsize = 16;
         
-        thisbox.text ++= function(v) { $edit.text = v; return; }
-        thisbox.text ++= function()  { return $edit.text; }
+        thisbox.text ++= function(v) { $edit.v_edit.text = v; return; }
+        thisbox.text ++= function()  { return $edit.v_edit.text; }
         
     </ui:box>
 </vexi>
