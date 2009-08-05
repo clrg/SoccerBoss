@@ -9,7 +9,7 @@
         <label text="Surname" />
         <entry id="sname" />
         <label text="Starting Age" />
-        <ageselect id="age" />
+        <pickgroup id="age"> values = [ 30, 35, 40, 45, 50, 55 ]; value = 40; </pickgroup>
         <label text="Experience Bonus" />
         <ui:box>
             <ui:box width="20" />
