@@ -1,10 +1,16 @@
-{
-  "source" : [
-    "F/soccerboss/src",
-    "F/soccerboss/src_dev"
-  ],
-  "projects" : [
-    "P/org.vexi.widgets",
-    "P/vexigamelib"
-  ]
-}
+<project-path>
+   <main>
+      <sources>
+         <source-dir path="src"/>
+      </sources>
+      <dependencies/>
+   </main>
+   <test>
+      <sources/>
+      <dependencies/>
+   </test>
+   <poke>
+      <sources/>
+      <dependencies/>
+   </poke>
+</project-path>
